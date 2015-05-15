@@ -1,0 +1,77 @@
+
+
+Started GET "/documents" for 127.0.0.1 at 2015-05-14 02:36:18 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6454ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3810ms
+  Rendered documents/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 1007ms (Views: 959.9ms)
+
+
+Started GET "/assets/scaffolds.self-4662f12727eb7284bb82d66f58c2adbfd41ded4d1971a63bb976d73a45f893c1.css?body=1" for 127.0.0.1 at 2015-05-14 02:36:19 -0300
+
+
+Started GET "/documents" for 127.0.0.1 at 2015-05-14 02:40:36 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5636ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2039ms
+  Rendered documents/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 371ms (Views: 328.9ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2015-05-14 02:40:40 -0300
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (63.3ms)
+  Rendered documents/new.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 137ms (Views: 135.8ms)
+
+
+Started POST "/documents" for 127.0.0.1 at 2015-05-14 02:40:43 -0300
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7qhwyrgvLyF7WQYRIDnt4B5+GTEx3hhi6YmVt/lRs4le/TCokTofXxDfugwp8jJYxoezGb17nT00lCE9Yfl9QA==", "document"=>{"name"=>"oij", "description"=>"oij"}, "commit"=>"Create Document"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5753ms
+  MOPED: 127.0.0.1:27017 INSERT       database=mongoid_carrierwave_development collection=documents documents=[{"_id"=>BSON::ObjectId('5554355b616e645e0e000000'), "name"=>"oij", "description"=>"oij"}] flags=[]
+                         COMMAND      database=mongoid_carrierwave_development command={:getlasterror=>1, :w=>1} runtime: 310.4642ms
+Redirected to http://localhost:3000/documents/5554355b616e645e0e000000
+Completed 302 Found in 316ms
+
+
+Started GET "/documents/5554355b616e645e0e000000" for 127.0.0.1 at 2015-05-14 02:40:43 -0300
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"5554355b616e645e0e000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={"_id"=>BSON::ObjectId('5554355b616e645e0e000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4282ms
+  Rendered documents/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 31.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2015-05-14 11:46:42 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6352ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2643ms
+  Rendered documents/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 420ms (Views: 373.1ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2015-05-14 11:46:45 -0300
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (94.7ms)
+  Rendered documents/new.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 178ms (Views: 176.8ms)
+
+
+Started POST "/documents" for 127.0.0.1 at 2015-05-14 11:46:47 -0300
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gf4RmqlvRcZCgF+4ygFsm98VdoR/bTB8/dCqPxK8uKWpq1H4gHp1uCkG46XDyrMjB+zcrPPItSMgzR61ihR2bA==", "document"=>{"name"=>"", "description"=>""}, "commit"=>"Create Document"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4098ms
+  MOPED: 127.0.0.1:27017 INSERT       database=mongoid_carrierwave_development collection=documents documents=[{"_id"=>BSON::ObjectId('5554b557616e6472f8000000'), "name"=>"", "description"=>""}] flags=[]
+                         COMMAND      database=mongoid_carrierwave_development command={:getlasterror=>1, :w=>1} runtime: 0.3781ms
+Redirected to http://localhost:3000/documents/5554b557616e6472f8000000
+Completed 302 Found in 4ms
+
+
+Started GET "/documents/5554b557616e6472f8000000" for 127.0.0.1 at 2015-05-14 11:46:47 -0300
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"5554b557616e6472f8000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={"_id"=>BSON::ObjectId('5554b557616e6472f8000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4912ms
+  Rendered documents/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 49ms (Views: 46.3ms)
