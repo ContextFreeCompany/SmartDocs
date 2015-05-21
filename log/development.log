@@ -75,3 +75,660 @@ Processing by DocumentsController#show as HTML
   MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={"_id"=>BSON::ObjectId('5554b557616e6472f8000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4912ms
   Rendered documents/show.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 49ms (Views: 46.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-21 00:52:48 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 38ms (Views: 10.3ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 00:53:07 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 7.3840ms
+  MOPED: Retrying connection attempt 1 more time(s). runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 8.6110ms
+  Rendered documents/index.html.erb within layouts/application (276.5ms)
+Completed 500 Internal Server Error in 336ms
+
+ActionView::Template::Error (Could not connect to a primary node for replica set #<Moped::Cluster:70224421523040 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @documents.each do |document| %>
+    16:       <tr>
+    17:         <td><%= document.name %></td>
+    18:         <td><%= document.description %></td>
+  app/views/documents/index.html.erb:15:in `_app_views_documents_index_html_erb___1902743808898887350_70224421167000'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (28.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (56.8ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:11:28 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.4900ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6880ms
+  Rendered documents/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1052ms (Views: 1050.7ms)
+
+
+Started GET "/assets/documents.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/assets/scaffolds.self-6e47cb1180d11b258444a49c8713a2a0e52aa7e45d5bffbb90e8ddeffe7f5582.css?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 01:11:29 -0300
+
+
+Started GET "/documents/new" for ::1 at 2015-05-21 01:11:35 -0300
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (117.1ms)
+  Rendered documents/new.html.erb within layouts/application (120.5ms)
+Completed 200 OK in 158ms (Views: 156.8ms)
+
+
+Started POST "/documents" for ::1 at 2015-05-21 01:11:47 -0300
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zuDVevLiz81aMNNdyR+bl38ak/wn5TeD1VmSXOaJPxMJO5TCgHHCABvl7eUsdFB9daOT9Z8fYK4f5e6K+0sq6g==", "document"=>{"name"=>"doc1", "description"=>"doc teste"}, "commit"=>"Create Document"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5860ms
+  MOPED: 127.0.0.1:27017 INSERT       database=mongoid_carrierwave_development collection=documents documents=[{"_id"=>BSON::ObjectId('555d5b034169726c9e000000'), "name"=>"doc1", "description"=>"doc teste"}] flags=[]
+                         COMMAND      database=mongoid_carrierwave_development command={:getlasterror=>1, :w=>1} runtime: 526.0320ms
+Redirected to http://localhost:3000/documents/555d5b034169726c9e000000
+Completed 302 Found in 532ms
+
+
+Started GET "/documents/555d5b034169726c9e000000" for ::1 at 2015-05-21 01:11:47 -0300
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"555d5b034169726c9e000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={"_id"=>BSON::ObjectId('555d5b034169726c9e000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5920ms
+  Rendered documents/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 35ms (Views: 32.3ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:11:50 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5690ms
+  Rendered documents/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 37.6ms)
+
+
+Started GET "/documents/new" for ::1 at 2015-05-21 01:11:53 -0300
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (1.8ms)
+  Rendered documents/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 37.4ms)
+
+
+Started POST "/documents" for ::1 at 2015-05-21 01:12:03 -0300
+Processing by DocumentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3zglYeWpnFoJkro1xeZ91LK7SViIbj4PdLraBQ1TD3AY42TZlzqRl0hHhI0gjbY+uAJJUTCUaSK+BqbTEJEaiQ==", "document"=>{"name"=>"doc2", "description"=>"doc teste"}, "commit"=>"Create Document"}
+  MOPED: 127.0.0.1:27017 INSERT       database=mongoid_carrierwave_development collection=documents documents=[{"_id"=>BSON::ObjectId('555d5b134169726c9e010000'), "name"=>"doc2", "description"=>"doc teste"}] flags=[]
+                         COMMAND      database=mongoid_carrierwave_development command={:getlasterror=>1, :w=>1} runtime: 10.5220ms
+Redirected to http://localhost:3000/documents/555d5b134169726c9e010000
+Completed 302 Found in 14ms
+
+
+Started GET "/documents/555d5b134169726c9e010000" for ::1 at 2015-05-21 01:12:03 -0300
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"555d5b134169726c9e010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={"_id"=>BSON::ObjectId('555d5b134169726c9e010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6480ms
+  Rendered documents/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 149ms (Views: 146.3ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:12:05 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5090ms
+  Rendered documents/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms)
+
+
+Started GET "/application" for ::1 at 2015-05-21 01:12:16 -0300
+
+ActionController::RoutingError (No route matches [GET] "/application"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.0ms)
+
+
+Started GET "/applications" for ::1 at 2015-05-21 01:12:27 -0300
+
+ActionController::RoutingError (No route matches [GET] "/applications"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.5ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:25:11 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6580ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4810ms
+  Rendered documents/index.html.slim within layouts/application (120.1ms)
+Completed 200 OK in 151ms (Views: 150.6ms)
+
+
+Started GET "/assets/scaffolds.self-6e47cb1180d11b258444a49c8713a2a0e52aa7e45d5bffbb90e8ddeffe7f5582.css?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/assets/documents.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 01:25:11 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:25:31 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5120ms
+  Rendered documents/index.html.slim within layouts/application (8.0ms)
+Completed 200 OK in 42ms (Views: 41.3ms)
+
+
+Started GET "/assets/documents.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/assets/scaffolds.self-6e47cb1180d11b258444a49c8713a2a0e52aa7e45d5bffbb90e8ddeffe7f5582.css?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 01:25:31 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:25:34 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5940ms
+  Rendered documents/index.html.slim within layouts/application (12.2ms)
+Completed 200 OK in 49ms (Views: 47.7ms)
+
+
+Started GET "/assets/documents.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/assets/scaffolds.self-6e47cb1180d11b258444a49c8713a2a0e52aa7e45d5bffbb90e8ddeffe7f5582.css?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 01:25:34 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:25:44 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6390ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5100ms
+  Rendered documents/index.html.slim within layouts/application (10.2ms)
+Completed 200 OK in 44ms (Views: 42.6ms)
+
+
+Started GET "/assets/documents.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/assets/scaffolds.self-6e47cb1180d11b258444a49c8713a2a0e52aa7e45d5bffbb90e8ddeffe7f5582.css?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 01:25:44 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:42:44 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6140ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4090ms
+  Rendered documents/index.html.slim within layouts/application (3.4ms)
+Completed 200 OK in 53ms (Views: 51.5ms)
+
+
+Started GET "/assets/documents.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-21 01:42:44 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-21 01:42:44 -0300
+
+
+Started GET "/assets/scaffolds.self-6e47cb1180d11b258444a49c8713a2a0e52aa7e45d5bffbb90e8ddeffe7f5582.css?body=1" for ::1 at 2015-05-21 01:42:44 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 01:42:45 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 01:42:45 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 01:42:45 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 01:42:45 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 01:42:45 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 01:51:32 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2600ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5610ms
+  Rendered documents/index.html.slim within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/thiageek/Dropbox/Projetos/Context/SmartScanner/app/assets/images
+  /Users/thiageek/Dropbox/Projetos/Context/SmartScanner/app/assets/javascripts
+  /Users/thiageek/Dropbox/Projetos/Context/SmartScanner/app/assets/stylesheets
+  /Users/thiageek/Dropbox/Projetos/Context/SmartScanner/vendor/assets/javascripts
+  /Users/thiageek/Dropbox/Projetos/Context/SmartScanner/vendor/assets/stylesheets
+  /Library/Ruby/Gems/2.0.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Library/Ruby/Gems/2.0.0/gems/jquery-rails-4.0.3/vendor/assets/javascripts
+  /Library/Ruby/Gems/2.0.0/gems/coffee-rails-4.1.0/lib/assets/javascripts):
+    3:   head
+    4:   	meta name="viewport" content="width=device-width, initial-scale=1.0"
+    5:     title SmartScanner by Context
+    6:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    7:     = csrf_meta_tags
+    8: 
+    9:     /[if lt IE 9]
+  app/assets/stylesheets/application.sass:1
+  app/views/layouts/application.html.slim:6:in `_app_views_layouts_application_html_slim__2781055783994957094_70224435375900'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (26.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (57.7ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 02:09:19 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5320ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4250ms
+  Rendered documents/index.html.slim within layouts/application (3.6ms)
+Completed 200 OK in 2957ms (Views: 2955.1ms)
+
+
+Started GET "/assets/application.self-31db1822f4a1da702eb421fa16134a8bb8cd5948d7c5bdf79ed6817f4c814fe2.css?body=1" for ::1 at 2015-05-21 02:09:22 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 02:09:22 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 02:09:22 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 02:09:22 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 02:09:22 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 02:09:22 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 09:04:00 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 14.4100ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 3.7920ms
+  Rendered documents/index.html.slim within layouts/application (51.5ms)
+Completed 200 OK in 482ms (Views: 460.9ms)
+
+
+Started GET "/assets/application.self-31db1822f4a1da702eb421fa16134a8bb8cd5948d7c5bdf79ed6817f4c814fe2.css?body=1" for ::1 at 2015-05-21 09:04:01 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 09:04:01 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 09:04:01 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 09:04:01 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 09:04:01 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 09:04:01 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 09:04:37 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7170ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6090ms
+  Rendered documents/index.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 53ms (Views: 51.3ms)
+
+
+Started GET "/assets/application.self-31db1822f4a1da702eb421fa16134a8bb8cd5948d7c5bdf79ed6817f4c814fe2.css?body=1" for ::1 at 2015-05-21 09:04:37 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 09:04:37 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 09:04:37 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 09:04:37 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 09:04:37 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 09:04:37 -0300
+
+
+Started GET "/documents/new" for ::1 at 2015-05-21 09:06:09 -0300
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (2.8ms)
+  Rendered documents/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 36.3ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 09:06:13 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6520ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6820ms
+  Rendered documents/index.html.slim within layouts/application (11.5ms)
+Completed 200 OK in 46ms (Views: 45.4ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 09:25:34 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 2.2510ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6110ms
+  Rendered documents/index.html.slim within layouts/application (29.2ms)
+Completed 200 OK in 2539ms (Views: 2505.9ms)
+
+
+Started GET "/assets/templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 09:25:37 -0300
+
+
+Started GET "/assets/application.self-31db1822f4a1da702eb421fa16134a8bb8cd5948d7c5bdf79ed6817f4c814fe2.css?body=1" for ::1 at 2015-05-21 09:25:37 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 09:25:37 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 09:25:37 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 09:25:37 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 09:25:37 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 09:25:37 -0300
+
+
+Started GET "/templates" for ::1 at 2015-05-21 09:25:42 -0300
+Processing by TemplatesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5510ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=templates selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 9.2720ms
+  Rendered templates/index.html.slim within layouts/application (17.1ms)
+Completed 200 OK in 60ms (Views: 50.9ms)
+
+
+Started GET "/templates/new" for ::1 at 2015-05-21 09:25:44 -0300
+Processing by TemplatesController#new as HTML
+  Rendered templates/_form.html.slim (118.2ms)
+  Rendered templates/new.html.slim within layouts/application (127.7ms)
+Completed 200 OK in 165ms (Views: 164.1ms)
+
+
+Started GET "/templates/new" for ::1 at 2015-05-21 10:22:46 -0300
+Processing by TemplatesController#new as HTML
+  Rendered templates/_form.html.slim (23.4ms)
+  Rendered templates/new.html.slim within layouts/application (89.7ms)
+Completed 200 OK in 678ms (Views: 646.1ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-21 10:22:47 -0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-21 10:22:47 -0300
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 10:22:47 -0300
+
+
+Started GET "/assets/templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-21 10:22:47 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 10:22:47 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-21 10:22:47 -0300
+
+
+Started GET "/assets/application.self-31db1822f4a1da702eb421fa16134a8bb8cd5948d7c5bdf79ed6817f4c814fe2.css?body=1" for ::1 at 2015-05-21 10:22:47 -0300
+
+
+Started GET "/documents" for ::1 at 2015-05-21 10:22:50 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9780ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5480ms
+  Rendered documents/index.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 123ms (Views: 115.9ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 10:22:51 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4850ms
+  Rendered documents/index.html.slim within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 36.9ms)
+
+
+Started GET "/documents/555d5b034169726c9e000000" for ::1 at 2015-05-21 10:22:54 -0300
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"555d5b034169726c9e000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={"_id"=>BSON::ObjectId('555d5b034169726c9e000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 4.2510ms
+  Rendered documents/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 39.8ms)
+
+
+Started GET "/documents/555d5b034169726c9e000000/edit" for ::1 at 2015-05-21 10:22:56 -0300
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"555d5b034169726c9e000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={"_id"=>BSON::ObjectId('555d5b034169726c9e000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6440ms
+  Rendered documents/_form.html.erb (4.5ms)
+  Rendered documents/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 51ms (Views: 48.9ms)
+
+
+Started GET "/documents" for ::1 at 2015-05-21 10:22:58 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5440ms
+  Rendered documents/index.html.slim within layouts/application (2.4ms)
+Completed 200 OK in 37ms (Views: 36.5ms)
+
+
+Started GET "/templates" for ::1 at 2015-05-21 10:23:03 -0300
+Processing by TemplatesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=templates selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9120ms
+  Rendered templates/index.html.slim within layouts/application (16.3ms)
+Completed 200 OK in 52ms (Views: 51.4ms)
+
+
+Started GET "/templates/new" for ::1 at 2015-05-21 10:23:04 -0300
+Processing by TemplatesController#new as HTML
+  Rendered templates/_form.html.slim (10.6ms)
+  Rendered templates/new.html.slim within layouts/application (17.6ms)
+Completed 200 OK in 141ms (Views: 140.1ms)
+
+
+Started POST "/templates" for ::1 at 2015-05-21 10:23:14 -0300
+Processing by TemplatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I7wL3OPZzxYWnWs9Ucvxsz3Kll/iGytWb8TGDHLWlRTkZ0pkkUrC21dIVYW0oDpZN3OWVlrhfHuleLrabxSA7Q==", "template"=>{"name"=>"test", "fields"=>"{\"_id\"=>#<Mongoid::Fields::Standard:0x007fd1c4189ff0 @name=\"_id\", @options={:default=>#<Proc:0x007fd1c418aec8@/Library/Ruby/Gems/2.0.0/gems/mongoid-4.0.2/lib/mongoid/fields.rb:50 (lambda)>, :pre_processed=>true, :type=>BSON::ObjectId, :klass=>Template}, @label=nil, @default_val=#<Proc:0x007fd1c418aec8@/Library/Ruby/Gems/2.0.0/gems/mongoid-4.0.2/lib/mongoid/fields.rb:50 (lambda)>, @default_name=\"___id_default__\", @pre_processed=true, @type=BSON::ObjectId>, \"name\"=>#<Mongoid::Fields::Standard:0x007fd1c7856538 @name=\"name\", @options={:type=>String, :klass=>Template}, @label=nil, @default_val=nil, @type=String>, \"fields\"=>#<Mongoid::Fields::Standard:0x007fd1c7855200 @name=\"fields\", @options={:type=>Array, :klass=>Template}, @label=nil, @default_val=nil>}"}, "commit"=>"Create Template"}
+  MOPED: 127.0.0.1:27017 INSERT       database=mongoid_carrierwave_development collection=templates documents=[{"_id"=>BSON::ObjectId('555ddc424d61637756000000'), "name"=>"test"}] flags=[]
+                         COMMAND      database=mongoid_carrierwave_development command={:getlasterror=>1, :w=>1} runtime: 16.9740ms
+Redirected to http://localhost:3000/templates/555ddc424d61637756000000
+Completed 302 Found in 20ms
+
+
+Started GET "/templates/555ddc424d61637756000000" for ::1 at 2015-05-21 10:23:14 -0300
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"555ddc424d61637756000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=templates selector={"_id"=>BSON::ObjectId('555ddc424d61637756000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5930ms
+  Rendered templates/show.html.slim within layouts/application (6.3ms)
+Completed 200 OK in 46ms (Views: 43.4ms)
