@@ -732,3 +732,84 @@ Processing by TemplatesController#show as HTML
   MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=templates selector={"_id"=>BSON::ObjectId('555ddc424d61637756000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5930ms
   Rendered templates/show.html.slim within layouts/application (6.3ms)
 Completed 200 OK in 46ms (Views: 43.4ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2015-05-26 07:14:13 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5643ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3432ms
+  Rendered documents/index.html.slim within layouts/application (45.2ms)
+Completed 200 OK in 2990ms (Views: 2974.9ms)
+
+
+Started GET "/assets/application.self-fff3df8987e9a9a575ab501f40188e3c93657ac99194364c5e9e0315957edbf4.css?body=1" for 127.0.0.1 at 2015-05-26 07:14:16 -0300
+
+
+Started GET "/assets/templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 07:14:16 -0300
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2015-05-26 07:14:20 -0300
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (74.7ms)
+  Rendered documents/new.html.erb within layouts/application (86.7ms)
+Completed 200 OK in 124ms (Views: 123.1ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2015-05-26 07:14:22 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9696ms
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6860ms
+  Rendered documents/index.html.slim within layouts/application (14.8ms)
+Completed 200 OK in 46ms (Views: 45.0ms)
+
+
+Started GET "/templates" for 127.0.0.1 at 2015-05-26 07:14:28 -0300
+Processing by TemplatesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=templates selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8290ms
+  Rendered templates/index.html.slim within layouts/application (7.2ms)
+Completed 200 OK in 45ms (Views: 35.1ms)
+
+
+Started GET "/templates/new" for 127.0.0.1 at 2015-05-26 07:14:30 -0300
+Processing by TemplatesController#new as HTML
+  Rendered templates/_form.html.slim (6.6ms)
+  Rendered templates/new.html.slim within layouts/application (11.2ms)
+Completed 200 OK in 45ms (Views: 44.1ms)
+
+
+Started POST "/templates" for 127.0.0.1 at 2015-05-26 07:14:42 -0300
+Processing by TemplatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yvqCl0xiq+sblYjFGhACTkeN80p13oj4vMUfdedySA56r8L1ZXeblXATNNgT2932n3RZYvl7Dadh2Kv/f9qGxw==", "template"=>{"name"=>"", "fields"=>"{\"_id\"=>#<Mongoid::Fields::Standard:0x007f3ed65d9bb8 @name=\"_id\", @options={:default=>#<Proc:0x007f3ed65d9ed8@/var/lib/gems/1.9.1/gems/mongoid-4.0.2/lib/mongoid/fields.rb:50 (lambda)>, :pre_processed=>true, :type=>BSON::ObjectId, :klass=>Template}, @label=nil, @default_val=#<Proc:0x007f3ed65d9ed8@/var/lib/gems/1.9.1/gems/mongoid-4.0.2/lib/mongoid/fields.rb:50 (lambda)>, @default_name=\"___id_default__\", @pre_processed=true, @type=BSON::ObjectId>, \"name\"=>#<Mongoid::Fields::Standard:0x007f3ed65f5b10 @name=\"name\", @options={:type=>String, :klass=>Template}, @label=nil, @default_val=nil, @type=String>, \"fields\"=>#<Mongoid::Fields::Standard:0x007f3ed65fec38 @name=\"fields\", @options={:type=>Array, :klass=>Template}, @label=nil, @default_val=nil>}"}, "commit"=>"Create Template"}
+  MOPED: 127.0.0.1:27017 INSERT       database=mongoid_carrierwave_development collection=templates documents=[{"_id"=>BSON::ObjectId('55644792616e640334000000'), "name"=>""}] flags=[]
+                         COMMAND      database=mongoid_carrierwave_development command={:getlasterror=>1, :w=>1} runtime: 133.3620ms
+Redirected to http://localhost:3000/templates/55644792616e640334000000
+Completed 302 Found in 137ms
+
+
+Started GET "/templates/55644792616e640334000000" for 127.0.0.1 at 2015-05-26 07:14:42 -0300
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"55644792616e640334000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=templates selector={"_id"=>BSON::ObjectId('55644792616e640334000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3940ms
+  Rendered templates/show.html.slim within layouts/application (9.9ms)
+Completed 200 OK in 97ms (Views: 95.0ms)
+
+
+Started GET "/templates" for 127.0.0.1 at 2015-05-26 07:14:50 -0300
+Processing by TemplatesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=templates selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6419ms
+  Rendered templates/index.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 38ms (Views: 37.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2015-05-26 07:14:52 -0300
+Processing by DocumentsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=mongoid_carrierwave_development collection=documents selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3846ms
+  Rendered documents/index.html.slim within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 29.3ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2015-05-26 07:18:39 -0300
+Processing by DocumentsController#new as HTML
+  Rendered documents/_form.html.erb (2.1ms)
+  Rendered documents/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 28.4ms)
