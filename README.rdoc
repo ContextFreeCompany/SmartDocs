@@ -1,5 +1,9 @@
 == README
 
+{<img src="https://travis-ci.org/Contexto/SmartScanner.svg?branch=add-gitignore" alt="Build Status" />}[https://travis-ci.org/Contexto/SmartScanner]
+{<img src="https://coveralls.io/repos/EuAndreh/cl-intbytes/badge.svg?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/EuAndreh/cl-intbytes?branch=master]
+{<img src="https://codeclimate.com/github/Contexto/SmartScanner/badges/gpa.svg" />}[https://codeclimate.com/github/Contexto/SmartScanner]
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
